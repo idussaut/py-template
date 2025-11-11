@@ -1,0 +1,27 @@
+[project]
+name = "py-template"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Ignacio Fernandez Dussaut",email = "Ignacio.Dussaut@Cartesian.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "pydantic (>=2.12.4,<3.0.0)",
+    "pydantic-settings (>=2.12.0,<3.0.0)",
+    "typer (>=0.20.0,<0.21.0)"
+]
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.14.4,<0.15.0)",
+    "pre-commit (>=4.4.0,<5.0.0)",
+    "commitizen (>=4.10.0,<5.0.0)",
+    "deptry (>=0.24.0,<0.25.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
