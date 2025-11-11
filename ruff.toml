@@ -1,0 +1,75 @@
+line-length = 120
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+fix=true
+
+[lint]
+select = [
+    'F',      # Pyflakes
+    'E',      # pycodestyle (Error)
+    'W',      # pycodestyle (Warning)
+    'I',      # isort
+    'C90',    # mccabe
+    'D',      # pydocstyle
+    'UP',     # pyupgrade
+    'YTT',    # flake8-2020
+    'B',      # flake8-bugbear
+    'T10',    # flake8-debugger
+    'T20',    # flake8-print
+    'LOG',    # flake8-logging
+    'SIM',    # flake8-simplify
+    'TC',     # flake8-type-checking
+    'C4',     # flake8-comprehensions
+    'PERF',   # Perflint
+    'PIE',    # flake8-pie
+    'PYI006', # flake8-pyi
+    'PYI062', # flake8-pyi
+    'PYI063', # flake8-pyi
+    'PYI066', # flake8-pyi
+]
+ignore = [
+    'D105', # Missing docstring in magic method
+    'D107', # Missing docstring in __init__
+    'D205', # 1 blank line required between summary line and description
+    'D415', # First line should end with a period, question mark, or exclamation point
+    'E501', # Line too long
+    'W505', # Doc line too long
+    'B011', # Do not assert False (python -O removes these calls), raise AssertionError()
+    'B028', # No explicit stacklevel keyword argument found
+    'B904', # Within an except* clause, raise exceptions with raise ... from err or raise ... from None to distinguish them from errors in exception handling
+    'PIE804', # Unnecessary dict kwargs
+]
+fixable = ["ALL"]
+mccabe = { max-complexity = 7 }
+pydocstyle = { convention = 'google' }
+
+[format]
+indent-style = "space"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"  # Use the same line length as above
