@@ -1,0 +1,17 @@
+[tool.commitizen]
+name = "cz_conventional_commits"
+version_provider = "pep621"
+version_scheme = "semver2"
+version_files = [
+    "pyproject.toml:version",
+    "version",
+    "py_template/__init__.py:__version__"
+]
+tag_format = "v$version"
+update_changelog_on_bump = true
+gpg_sign = true
+annotated_tag = true
+bump_message = "build(bump_version): release v$current_version → v$new_version"
+
+[tool.commitizen.customize]
+schema_pattern = '(?s)(feat|fix|docs|style|refactor|perf|test|chore|build|ci|revert|config|wip|security|deps|i18n|a11y|ux|ui|infra|init|analytics|seo|legal|typo|comment|example|mock|hotfix|merge|cleanup|deprecate|move|rename|split|combine|add|remove|update|upgrade|downgrade|patch|optimize)(\(\S+\))?!?: ([^\n\r]+)((\n\n.*)|(\s*))?$'
